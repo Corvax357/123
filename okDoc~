@@ -10,10 +10,10 @@
   <script>
     var log = prompt("Kto ty?", "");
 
-    if(log==nul) { alert ("Vhod otmenen") }
-    else if (log!="TAN") {alert ("Ti kto takoi???") 
+    if(log==null) { alert ("Vhod otmenen") }
+    else if (log!="Admin") {alert ("Ti kto takoi???")} 
     else { var pass = prompt("Password?", "");
-    if(pass=="123") alert("Welcome!!!")
+    if(pass=="Vlastelin") alert("Welcome!!!")
     else if(pass==null)  alert ("Vhod otmenen")
     else alert("Wrong password");
 
