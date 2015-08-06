@@ -1,0 +1,134 @@
+body  {
+  background-color: #FFFFFF;	
+  font-family: Arial;
+  font-size: 12px; 
+  letter-spacing: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+td  {
+  font-family: Arial;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0px;
+  padding: 0px;
+}
+
+table {
+  border: 0px;
+  border-collapse: collapse;
+  border-color: #111111;
+  width: 100%;
+} 
+
+a, span { 
+  color: black;
+  font-style: Verdana; 
+  font-size: 15px;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+
+.navibar-layout {
+  background-image: url("vendor/layout_05.gif");
+  height: 20px;
+}
+
+.newsbar-body {
+  background-image: url("vendor/layout_32.gif");
+  vertical-align: top;
+}
+
+.newsbar-sides td:nth-child(1) {
+  background-image: url("vendor/layout_28.gif");
+}
+
+.newsbar-sides td:nth-child(2), .newsbar-body-2  {
+  background-image: url("vendor/layout_24.gif");
+}
+
+.newsbar-sides td:nth-child(3) {
+  background-image: url("vendor/layout_25.gif");
+}
+
+.newsbar-sides-2, .main-left {
+  background-image: url("vendor/layout_26.gif"); 
+  vertical-align: top;
+}
+
+.main-layout {
+  background-image: url("vendor/layout_22.gif");
+  vertical-align: top;
+}
+
+.main-bottom-1 {
+  background-image: url("vendor/layout_34.gif");
+}
+
+.main-bottom-2 {
+  background-image: url("vendor/layout_36.gif");
+}
+
+.main-bottom-3 {
+  background-image: url("vendor/layout_38.gif");
+}
+
+.top-right-layout {
+  width: 100%;
+  background-image: url("vendor/layout_04.gif");
+}
+
+.spacer td:nth-child(1) {
+  width:39px; height: 1px;
+}
+
+.spacer td:nth-child(2) {
+  width:147px; height: 1px;
+}
+
+.spacer td:nth-child(3) {
+  width:21px; height: 1px;
+}
+
+.spacer td:nth-child(4) {
+  width:18px; height: 1px;
+}
+
+.spacer td:nth-child(5) {
+  width:139px; height: 1px;
+}
+
+.spacer td:nth-child(6) {
+  width:12px; height: 1px;
+}
+
+.spacer td:nth-child(7) {
+  width:82px; height: 1px;
+}
+
+.spacer td:nth-child(8) {
+  width:14px; height: 1px;
+}
+
+.spacer td:nth-child(9) {
+  width:103px; height: 1px;
+}
+
+.spacer td:nth-child(10) {
+  width:14px; height: 1px;
+}
+
+.spacer td:nth-child(11) {
+  width:44px; height: 1px;
+}
+
+.spacer td:nth-child(12) {
+  width:12px; height: 1px;
+}
+
+.spacer td:nth-child(13) {
+  width:69px; height: 1px;
+}
