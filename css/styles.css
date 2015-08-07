@@ -33,52 +33,52 @@ a, span {
 }
 
 .navibar-layout {
-  background-image: url("vendor/layout_05.gif");
+  background-image: url("../vendor/layout_05.gif");
   height: 20px;
 }
 
 .newsbar-body {
-  background-image: url("vendor/layout_32.gif");
+  background-image: url("../vendor/layout_32.gif");
   vertical-align: top;
 }
 
 .newsbar-sides td:nth-child(1) {
-  background-image: url("vendor/layout_28.gif");
+  background-image: url("../vendor/layout_28.gif");
 }
 
 .newsbar-sides td:nth-child(2), .newsbar-body-2  {
-  background-image: url("vendor/layout_24.gif");
+  background-image: url("../vendor/layout_24.gif");
 }
 
 .newsbar-sides td:nth-child(3) {
-  background-image: url("vendor/layout_25.gif");
+  background-image: url("../vendor/layout_25.gif");
 }
 
 .newsbar-sides-2, .main-left {
-  background-image: url("vendor/layout_26.gif"); 
+  background-image: url("../vendor/layout_26.gif"); 
   vertical-align: top;
 }
 
 .main-layout {
-  background-image: url("vendor/layout_22.gif");
+  background-image: url("../vendor/layout_22.gif");
   vertical-align: top;
 }
 
 .main-bottom-1 {
-  background-image: url("vendor/layout_34.gif");
+  background-image: url("../vendor/layout_34.gif");
 }
 
 .main-bottom-2 {
-  background-image: url("vendor/layout_36.gif");
+  background-image: url("../vendor/layout_36.gif");
 }
 
 .main-bottom-3 {
-  background-image: url("vendor/layout_38.gif");
+  background-image: url("../vendor/layout_38.gif");
 }
 
 .top-right-layout {
   width: 100%;
-  background-image: url("vendor/layout_04.gif");
+  background-image: url("../vendor/layout_04.gif");
 }
 
 .spacer td:nth-child(1) {
@@ -132,3 +132,4 @@ a, span {
 .spacer td:nth-child(13) {
   width:69px; height: 1px;
 }
+
