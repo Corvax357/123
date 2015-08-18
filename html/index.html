@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <title>CarCompany</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
-    <script src="../javascripts/bootstrap.min.js"></script>
     <script src="../javascripts/jquery-2.1.4.js"></script>
+    <script src="../javascripts/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -32,18 +33,144 @@
         </nav>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6"> *Space for a carousel* </div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+          <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="active item">
+                <img src="../vendor/1.jpeg" alt="Ford">
+                <div class="carousel-caption">
+                  <h3>Ford</h3>
+                  <p>A Vehicle for Every Lifestyle</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="../vendor/2.jpeg" alt="Chevrolet">
+                <div class="carousel-caption">
+                  <h3>Chevrolet</h3>
+                  <p>Explore New Roads</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="../vendor/3.jpeg" alt="Toyota">
+                <div class="carousel-caption">
+                  <h3>Toyota</h3>
+                  <p>Let's Go Places</p>
+                </div>
+              </div>
+                 <div class="item">
+                <img src="../vendor/4.jpeg" alt="BMW">
+                <div class="carousel-caption">
+                  <h3>BMW</h3>
+                  <p>The Ultimate Driving Machine</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
           <div class="jumbotron">
-            <h1>CarCompany</h1>
-            <p> We are the best company ever and we shall prove it! </p>
-            <div> *Space for a modal* </div> 
+            <h1>Car<br>Company
+            </h1>
+            <div class="container">
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Earn free prize!</button>
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"> </button>
+                      <h4 class="modal-title">Congratulations!</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>You won 500$ discount for all cars availible on our site!
+                      Details on: <a href="#">www.CarCompany.com</a></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">
+                      Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="row"> 
-      	<div class="col-sm-6 col-md-6 col-lg-6"> *Space for collapsible containers*</div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
+      	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Ford</a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+               aria-labelledby="headingOne">
+                <div class="panel-body">
+                The Ford Motor Company (commonly referred to as simply Ford) is an American multinational automaker headquartered in Dearborn, Michigan, a suburb of Detroit. It was founded by Henry Ford and incorporated on June 16, 1903. The company sells automobiles and commercial vehicles under the Ford brand and most luxury cars under the Lincoln brand. Ford also owns Brazilian SUV manufacturer, Troller, and Australian performance car manufacturer FPV. In the past it has also produced tractors and automotive components. <br>
+                Ford owns a 2.1% stake in Mazda of Japan, an 8% stake in Aston Martin of the United Kingdom, and a 49% stake in Jiangling of China. It also has a number of joint-ventures, two in China (Changan Ford Mazda and Ford Lio Ho), one in Thailand (AutoAlliance Thailand), one in Turkey (Ford Otosan), and one in Russia (Ford Sollers). It is listed on the New York Stock Exchange and is controlled by the Ford family, although they have minority ownership.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse"
+                   data-parent="#accordion" href="#collapseTwo" aria-expanded="false" 
+                  aria-controls="collapseTwo">Chevrolet
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+               aria-labelledby="headingTwo">
+                <div class="panel-body">
+                Chevrolet /ʃɛvrəˈleɪ/, colloquially referred to as Chevy and formally the Chevrolet Division of General Motors Company, is an American automobile division of the American manufacturer General Motors (GM). Louis Chevrolet and ousted General Motors founder William C. Durant started the company on November 3, 1911  as the Chevrolet Motor Car Company. Durant used the Chevrolet Motor Car Company to acquire a controlling stake in General Motors with a reverse merger occurring on May 2, 1918 and propelled himself back to the GM presidency. After Durant's second ouster in 1919, Alfred Sloan, with his maxim "a car for every purse and purpose," would pick the Chevrolet brand to become the volume leader in the General Motors family, selling mainstream vehicles to compete with Henry Ford's Model T in 1919 and overtaking the Model T as the best-selling car in the United States by 1929.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree">Toyota
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                aria-labelledby="headingThree">
+                <div class="panel-body">
+                Toyota Motor Corporation (Japanese: トヨタ自動車株式会社 Hepburn: Toyota Jidōsha KK?, IPA: [toꜜjota], /tɔɪˈoʊtə/) is a Japanese automotive manufacturer headquartered in Toyota, Aichi, Japan. In March 2014 the multinational corporation consisted of 338,875 employees worldwide and, as of November 2014, is the eleventh-largest company in the world by revenue. Toyota was the largest automobile manufacturer in 2012 (by production) ahead of the Volkswagen Group and General Motors. In July of that year, the company reported the production of its 200-millionth vehicle. Toyota is the world's first automobile manufacturer to produce more than 10 million vehicles per year. It did so in 2012 according to OICA, and in 2013 according to company data. As of July 2014, Toyota was the largest listed company in Japan by market capitalization (worth more than twice as much as #2-ranked SoftBank) and by revenue.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" 
+                  data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                  aria-controls="collapseFour">BMW
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+              aria-labelledby="headingFour">
+                <div class="panel-body">
+                Bayerische Motoren Werke AG (English: Bavarian Motor Works), commonly known as BMW or BMW AG, is a German automobile, motorcycle and engine manufacturing company founded in 1916. BMW is headquartered in Munich, Bavaria, Germany. It also owns and produces Mini cars, and is the parent company of Rolls-Royce Motor Cars. BMW produces motorcycles under BMW Motorrad, and plug-in electric cars under the BMW i sub-brand. BMW is one of the best-selling luxury automakers in the world.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
           <div class="panel-group">
             <div class="panel panel-default"> 
               <div class="panel-heading">Subaru Forester</div>
@@ -59,6 +186,11 @@
               <div class="panel-heading">Lada Priora</div>
               <div class="panel-body">Premium-class auto...</div>
               <div class="panel-footer">Created only for kings and emprerors!</div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">Toyota Camry</div>
+              <div class="panel-body">The fastest car from Japan...</div>
+              <div class="panel-footer">Get a set of tyres for free!</div>
             </div>
           </div>
         </div>

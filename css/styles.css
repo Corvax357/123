@@ -1,11 +1,19 @@
 body  {
-  background-color: #FFFF6C;	
+  background-color: #636361;	
 }
 
 .jumbotron {
-  background-color: #272722; color: #FFFFFF; text-align: center;
+  background-color: #272722; color: #FFFFFF; text-align: center; height: 300px;
 }
 
 .footer {
   background-color: #272722; color: #FFFFFF; text-align: center; font-size: 10px; 
 }
+
+.modal, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: auto; 
+  height: 300px; 
+  margin: auto;
+  color: black;
+}
+   
