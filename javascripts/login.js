@@ -1,18 +1,26 @@
 function logIn() {
-    var pwd=document.forms["myForm"]["pwd"].value;
-    if(pwd.length<5 || pwd==pwd.toLowerCase()) {
-        alert("Password must contain 5 or more symbols including at least 1 upper-case letter and 1 digit!");
-        return false;
-    } else { 
-        var patt = /[0-9]/g;
-        var res = pwd.match(patt);
-        if(res!==null) {
-            alert("You are welcome!(^_^)");
-            document.cookie="username=RandomUserName; expires=Thu, 31 Dec 2015 00:00:00 UTC; path=/";
-            return true;
+    var email = document.forms["myForm"]["email"].value;
+        var pos1 = email.indexOf("@"); 
+        var pos2 = email.lastIndexOf(".");
+        if ((pos1 !== -1) && (pos2 !== -1) && (pos2 - pos1 >= 4)) {
+            var pwd = document.forms["myForm"]["pwd"].value;
+            if (pwd.length < 5 || pwd === pwd.toLowerCase()) {
+                document.getElementById("error-msg-pwd").style.display = "block";
+                return false;
+            } else { 
+                if (pwd.match(/[0-9]/g) !== null) {
+                    var expdate = new Date();
+                    expdate.setTime(expdate.getTime() + (365*24*60*60*1000));
+                    document.cookie = "username=RandomUserName; expires=" + expdate.toUTCString() + "; path=/";
+                    document.location = "index.html";
+                    return true;
+                } else {
+                    document.getElementById("error-msg-pwd").style.display = "block";
+                    return false;
+                }   
+            }
         } else {
-            alert("Password must contain 5 or more symbols including at least 1 upper-case letter and 1 digit!");
+            document.getElementById("error-msg-log").style.display = "block";
             return false;
         }
-    } 
-}
+    }    

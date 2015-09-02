@@ -17,6 +17,9 @@ body  {
   color: black;
 }
    
-.help-block {
-  color: white;  
+#error-msg-log, #error-msg-pwd {
+  color: red;
+  display: none;  
 }
+
+
