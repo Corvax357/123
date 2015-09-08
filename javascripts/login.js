@@ -28,13 +28,7 @@ function User() {
     this.email = $("#reg-email").val();
     this.birthday = $("#reg-birthday").val();
     this.password = $("#reg-pwd").val();
-    this.valid = function regValidation() { 
-        if (checkName(this.firstname, this.lastname) && checkEmail(this.email) && checkBirthday(this.birthday) && checkPassword(this.password) && checkPasswordConf(this.password, $("#reg-pwd-conf").val())) {
-            return true;
-        } else {
-            return false;
-        } 
-    }
+    this.valid = function regValidation() { return (checkName(this.firstname, this.lastname) && checkEmail(this.email) && checkBirthday(this.birthday) && checkPassword(this.password) && checkPasswordConf(this.password, $("#reg-pwd-conf").val())) }
 }
     
 function checkName(firstname, lastname) {
