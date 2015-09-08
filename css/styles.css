@@ -17,7 +17,7 @@ body  {
   color: black;
 }
    
-#err-msg-log, #err-msg-pwd, #err-msg-reg-firstname, #err-msg-reg-lastname,
+#err-msg-email, #err-msg-pwd, #err-msg-reg-firstname, #err-msg-reg-lastname,
 #err-msg-reg-email, #err-msg-reg-birthday, #err-msg-reg-pwd, #err-msg-reg-pwd-conf {
   color: red;
   display: none;  

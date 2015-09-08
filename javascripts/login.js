@@ -1,96 +1,92 @@
 function logIn() {
-    var email = document.forms["myForm"]["email"].value;
-    if ((email.indexOf("@") !== -1) && (email.lastIndexOf(".") !== -1) && (email.lastIndexOf(".") - email.indexOf("@") >= 4)) {
-        var pwd = document.forms["myForm"]["pwd"].value;
-        if (pwd.length < 5 || pwd === pwd.toLowerCase()) {
-            document.getElementById("err-msg-pwd").style.display = "block";
+    var email = $("#email").val();
+    var pwd = $("#pwd").val();
+    if (checkEmail(email) && checkPassword(pwd)) {
+        var expdate = new Date();
+        expdate.setTime(expdate.getTime() + (365*24*60*60*1000));
+        document.cookie = "username=RandomUserName; expires=" + expdate.toUTCString() + "; path=/";
+        document.location = "index.html";
+        return true;    
+    } else { 
+        return false;
+    }   
+}   
+
+function signUp() {
+    var usr1 = new User();
+    if(usr1.valid()) {
+        alert("Success!");
+        return true;  // ...new User properties could be saved 
+    } else {
+        return false; // ...new User properties could be erased
+    }
+}
+
+function User() {
+    this.firstname = $("#reg-firstname").val();
+    this.lastname = $("#reg-lastname").val();
+    this.email = $("#reg-email").val();
+    this.birthday = $("#reg-birthday").val();
+    this.password = $("#reg-pwd").val();
+    this.valid = function regValidation() { 
+        if (checkName(this.firstname, this.lastname) && checkEmail(this.email) && checkBirthday(this.birthday) && checkPassword(this.password) && checkPasswordConf(this.password, $("#reg-pwd-conf").val())) {
+            return true;
+        } else {
             return false;
-        } else { 
-            if (pwd.match(/[0-9]/g) !== null) {
-                var expdate = new Date();
-                expdate.setTime(expdate.getTime() + (365*24*60*60*1000));
-                document.cookie = "username=RandomUserName; expires=" + expdate.toUTCString() + "; path=/";
-                document.location = "index.html";
-                return true;
-            } else {
-                document.getElementById("err-msg-pwd").style.display = "block";
-                return false;
-            }   
-        }
-    } else {
-        document.getElementById("err-msg-log").style.display = "block";
-        return false;
+        } 
     }
-}    
-
-function signUp() { 
-    if (checkFirstName() && checkLastName() && checkEmail() && checkBirthday() && checkPassword() && checkPasswordConf()) {
-        return true;
-    } else {
+}
+    
+function checkName(firstname, lastname) {
+    if (firstname.charAt(1) === "" || /[^A-z]/.test(firstname)) {
+        $("#err-msg-reg-firstname").show();
         return false;
+    } else {
+        if (lastname.charAt(1) === "" || /[^A-z]/.test(lastname)) {
+            $("#err-msg-reg-lastname").show();
+            return false;
+        } else {
+            return true;
+        }    
     }
 }
 
-function checkFirstName() {
-    if ((document.forms["myForm-2"]["reg-firstname"].value.charAt(1) === "") || (document.forms["myForm-2"]["reg-firstname"].value.match(/[^A-z]/g) !== null)) {
-        document.getElementById("err-msg-reg-firstname").style.display = "block";
-        return false;
-    } else {
-        return true;
-    }
-}
-
-function checkLastName() {
-    if ((document.forms["myForm-2"]["reg-lastname"].value.charAt(1) === "") || (document.forms["myForm-2"]["reg-lastname"].value.match(/[^A-z]/g) !== null)) {
-        document.getElementById("err-msg-reg-lastname").style.display = "block";
-        return false;
-    } else {
-        return true;
-    }
-}
-
-function checkEmail() {
-    var email = document.forms["myForm-2"]["reg-email"].value;  
-    if ((email.indexOf("@") !== -1) && (email.lastIndexOf(".") !== -1) && (email.lastIndexOf(".") - email.indexOf("@") >= 4)) {
+function checkEmail(email) { 
+    if (/@/.test(email)) {
         return true; 
     } else {
-        document.getElementById("err-msg-reg-email").style.display = "block";
+        $("#err-msg-reg-email, #err-msg-email").show();
         return false;    
     }
 }
 
-function checkBirthday() {
-    var dateConv = document.forms["myForm-2"]["reg-birthday"].value.split("-");
-    var inputDate = new Date(dateConv[0], dateConv[1]-1, dateConv[2]);
+function checkBirthday(birthday) {
+    var inputDate = new Date(birthday.split("-")[0], birthday.split("-")[1]-1, birthday.split("-")[2]);
     var currentDate = new Date();
     if (currentDate.getTime() > inputDate.getTime()) {
         return true;
     } else {
-        document.getElementById("err-msg-reg-birthday").style.display = "block";   
+        $("#err-msg-reg-birthday").show();   
         return false; 
     }   
 }   
 
-function checkPassword() {
-    var pwd = document.forms["myForm-2"]["reg-pwd"].value;
-    if (pwd.length < 5 || pwd === pwd.toLowerCase()) {
-        document.getElementById("err-msg-reg-pwd").style.display = "block";
-        return false;
-    } else { 
-        if (pwd.match(/[0-9]/g) !== null) {
+function checkPassword(pwd) {
+    if (pwd.length > 4 && pwd !== pwd.toLowerCase() && /[0-9]/.test(pwd)) {
         return true;
-        } else {
-            document.getElementById("err-msg-reg-pwd").style.display = "block";
-            return false;
-        }
-    } 
-}
+    } else { 
+        $("#err-msg-reg-pwd, #err-msg-pwd").show();
+        return false;
+    }
+} 
 
-function checkPasswordConf() {
-    if (document.forms["myForm-2"]["reg-pwd"].value === document.forms["myForm-2"]["reg-pwd-conf"].value) { 
+function checkPasswordConf(pwd, pwdConf) {
+    if (pwd === pwdConf) { 
         return true;
     } else {
-        document.getElementById("err-msg-reg-pwd-conf").style.display = "block";
+        $("#err-msg-reg-pwd-conf").show();
         return false;
     }
 }
+
+ 
