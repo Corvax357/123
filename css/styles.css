@@ -18,9 +18,13 @@ body  {
 }
    
 #err-msg-email, #err-msg-pwd, #err-msg-reg-firstname, #err-msg-reg-lastname,
-#err-msg-reg-email, #err-msg-reg-birthday, #err-msg-reg-pwd, #err-msg-reg-pwd-conf {
+#err-msg-reg-email, #err-msg-reg-birthday, #err-msg-reg-pwd, #err-msg-reg-pwd-conf, #err-msg-adm-log {
   color: red;
   display: none;  
 }
 
-
+#users-list {
+  color: black;
+  text-align: center;	
+  display: none;
+}
